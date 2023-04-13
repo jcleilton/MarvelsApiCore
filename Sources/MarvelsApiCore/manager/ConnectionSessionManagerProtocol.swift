@@ -10,9 +10,11 @@ import UIKit
 typealias Callback<T: Any, E: Any> = (T, E) -> Void
 
 protocol ConnectionSessionManagerProtocol: AnyObject {
+    
     func invoke(url: String, withArgs args: Dictionary<String, Any>, httpMethod: ConnectionSessionHttpMethod, completion: Callback<Any?, ErrorKind?>?)
     func invokeGetData(url: String, completion: @escaping (Result<Data, ErrorKind>) -> Void)
     func downloadImage(from url: URL, completion: @escaping Callback<UIImage?, Error?>)
+    
 }
 
 class ConnectionSessionManager: ConnectionSessionManagerProtocol {
