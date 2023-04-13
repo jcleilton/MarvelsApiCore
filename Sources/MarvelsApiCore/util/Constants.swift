@@ -11,15 +11,15 @@ import Foundation
 struct Constants {
     
     static private var publicKey: String {
-        Bundle.main.infoDictionary?["publicKey"] as? String ?? String()
+        "124e0927e82cf1c2919b72eeda4c55e0"
     }
     
     static private var privateKey: String {
-        Bundle.main.infoDictionary?["privateKey"] as? String ?? String()
+        "a1b10ff8ace7e6bcaf20b9d37ca2dc3eaa2fbf13"
     }
     
     static private var routerURL: String {
-        Bundle.main.infoDictionary?["routerURL"] as? String ?? String()
+        "https://gateway.marvel.com/v1/public/characters"
     }
     
     static private func getQuery(from value: String) -> String {
