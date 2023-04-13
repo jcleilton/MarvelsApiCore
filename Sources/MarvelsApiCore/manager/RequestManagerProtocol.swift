@@ -9,8 +9,10 @@ import UIKit
 
 @available(iOS 13.0, *)
 protocol RequestManagerProtocol: AnyObject {
+    
     func fecthData(with value: String, callback: @escaping (Result<[Hero], ErrorKind>) -> Void)
     func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void)
+    
 }
 
 @available(iOS 13.0, *)
